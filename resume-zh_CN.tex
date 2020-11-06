@@ -7,110 +7,67 @@
 %\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{cite}
+\usepackage{hyperref}
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{江涛}
+\name{李振源}
 
-% {E-mail}{mobilephone}{homepage}
-% be careful of _ in emaill address
-\contactInfo{(+86) 132-6029-9910}{hijiangtao@gmail.com}{Web前端研发工程师}{GitHub @hijiangtao}
-% {E-mail}{mobilephone}
-% keep the last empty braces!
-%\contactInfo{xxx@yuanbin.me}{(+86) 131-221-87xxx}{}
- 
-\section{个人总结}
-本人在校成绩优秀、乐观向上，工作负责、自我驱动力强、热爱尝试新事物，认同开放、连接、共享的Web在未来的不可替代性。在校期间长期从事可视分析(Web的2D/3D时空可视化)相关研究，对Web技术发展趋势及前端工程化解决方案有浓厚兴趣。\textbf{现任职于阿里巴巴集团。}
+\contactInfo{(+86) 183-9259-3905}{lizhenyuan@zju.edu.cn}{浙江大学 网络空间安全 博士}{GitHub @li-zhenyuan}
 
-% \section{\faGraduationCap\ 教育背景}
+
+% \section{个人总结}
+% \textbf{}
+
+
 \section{教育背景}
-\datedsubsection{\textbf{中国科学院大学},计算机应用技术,\textit{在读硕士研究生}}{2015.9 - 2018.6}
-\ \textbf{排名11/133(前10\%)},中国科学院大学学业奖学金(2次),IEEE Student member,预计2018年6月毕业
-\datedsubsection{\textbf{北京理工大学},软件工程,\textit{工学学士}}{2011.9 - 2015.6}
-\ \textbf{排名2/62(前5\%)},国家励志奖学金,人民奖学金(7次),科技竞赛奖(2次),北京市普通高等学校优秀毕业生,北京理工大学优秀毕业生,软件学院金牌毕业生,优秀团员/优秀学生(5次)
-\datedsubsection{\textbf{荷兰 莱顿大学},计算机科学与技术,\textit{国家留学基金委公派交换生}}{2015.3 - 2015.5}
-\ 2014年中国政府奖学金(\textit{http://www.csc.edu.cn/}),DID-ACTE项目交换生(\textit{http://did-acte.org/})
+\datedsubsection{\textbf{浙江大学},网络空间安全,\textit{在读博士研究生}}{2017.9 - 2022.6}
+浙江大学博士生学术新星项目(CNY 112K), CSC公派留学生联培博士项目, 三好研究生, 优秀博士生岗位助学金(CNY 10K), 预计2022年6月毕业
+\datedsubsection{\textbf{西安电子科技大学},信息安全,\textit{工学学士}}{2013.9 - 2017.6}
+排名1/154(前1\%),国家奖学金,西安电子科技大学优秀毕业生标兵(~20/5000),科技竞赛奖(2次),优秀学生标兵/优秀学生(3次)
 
-% \section{\faCogs\ IT 技能}
-\section{技术能力}
+
+\section{项目经历}
+\datedsubsection{\textbf{基于系统级溯源图的入侵检测与分析} {[2,3]}}{2019.8 - present}
+\begin{itemize}
+  \item 随着信息技术的发展, 网络空间的边界不断延展, 向攻击者暴露了越来越多的漏洞. 传统的补漏式的防御策略越来越难以为继. 安全从业人员和研究者亟需新的工具来描述攻击并进行检测. 系统级的溯源图能够将系统中的行为根据因果关系联系起来, 很适合检测现在常见的多阶段的高级持续性攻击. 因此被广泛的研究. 
+  \item 我们在已有工作的基础上, 主要研究普遍出现的依赖爆炸带来的误报和效率问题. 尝试设计基于日志流的, 轻量, 准确, 低延迟的检测系统。 
+  \item 关键词: Provenance Graph, Threat Detection, Causality Analysis, Dependence Explosion Problem.
+\end{itemize}
+
+\datedsubsection{\textbf{高效且轻量的 PowerShell 解混淆框架} {[1,5]}}{2018.7 - 2019.11}
+\begin{itemize}
+  \item 近年来, PowerShell 被广泛的用于多种网络攻击, 包括钓鱼邮件攻击, 勒索病毒, 无文件攻击等. 但是由于 PowerShell 的动态特性, 可很方便的混淆和实施无文件攻击. 因此现有的检测方法无法准确的检测基于 PowerShell 的攻击. 
+  \item 我们针对关键的混淆问题, 设计了一套细粒度(抽象语法子树)的, 准确且轻量的解混淆系统. 实验证明可以有效处理多种, 多层的混淆, 且解混淆可以有效提高检测的准确度. 
+  \item 关键词: PowerShell (Scripting Language), Fileless Attack, De-Obfuscation, AST.
+\end{itemize}
+
+\datedsubsection{\textbf{终端安全和高级持续性威胁 (APT) 的检测} {[4]}}{2016.7 - 2020.10}
+\begin{itemize}
+  \item 高级持续性威胁可以对政府和企业的高价值目标造成严重的威胁. 受到了业界和学术界的广泛关注. 但是现有的检测方法既不够细粒度也不鲁棒, 无法准确的检测 APT 攻击.
+  \item 本项目主要研究了被广泛用于 APT 攻击的远控木马 (RAT) 的多种攻击行为。研发了实时, 细粒度的检测系统 {\it APTShield} 通过先检测可疑的行为, 然后结合上下文信息对初步检测结果进行过滤.
+  \item 关键词: APT, RAT, Event Tracing for Windows (ETW), Potential Harmful Behavior
+\end{itemize} 
+
+
+\section{论文列表}
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}[parsep=0.2ex]
-  \item \textbf{编程语言}: JavaScript (ECMAScript, Node.js), HTML/CSS, Python, Go, SQL, C, Shell
-  \item \textbf{操作系统,数据库与工程构建}: Linux/macOS/MySQL/MongoDB/Git/webpack/Progressive Web App
-  \item \textbf{关键词}: React/Vue.js/D3.js(SVG)/three.js(canvas, WebGL)/chrome extension/Express
+\item {[1]} {\bf Zhenyuan Li}, Qi Alfred Chen, Chunlin Xiong, Yan Chen, Tiantian Zhu,and Hai Yang. ``Effective and Light-Weight Deobfuscation and Semantic-Aware Attack Detection for PowerShell Scripts'', In ACM Conference on Computer and Communications Security 2019 ({\bf ACM CCS'19}). \href{https://dl.acm.org/doi/10.1145/3319535.3363187}{[Paper, Vedio]} \href{https://github.com/li-zhenyuan/PowerShellDeobfuscation}{[Code]}
+\item {[2]} {\bf Zhenyuan Li}, Qi Alfred Chen, Yang Runqing, Yan Chen. ``Threat Detection and Investigation with System-level Provenance Graphs: A Survey'', (arXiv:2006.01722v1 [cs.CR]). ArXiv Computer Science. (2020). \href{https://arxiv.org/pdf/2006.01722}{[Paper]} (Revision, {Computer \& Security})
+\item {[3]} {\bf Zhenyuan Li}, Yang Runqing, Qi Alfred Chen, Yan Chen. ``A First Look at Evasion against Provenance Graph-based Threat Detection''. (Under submission, ACSAC' 20 Poster session)
+\item {[4]} Runqing Yang, Xutong Chen, Haitao Xu, Yueqiang Chen, Chunlin Xiong, Linqi Ruan, Mohammad Kavousl, {\bf Zhenyuan Li}, Liheng Xu, Yan Chen. ``RATScope: Recording and Reconstructing Missing RAT Semantic Behaviors for Forensic Analysis on Windows'', to appear in IEEE Transactions on Dependable and Secure Computing ({\bf IEEE TDSC' 21}) \href{https://doi.org/10.1109/TDSC.2020.3032570}{[Paper]}
+\item {[5]} Chunlin Xiong, {\bf Zhenyuan Li}, Qi Alfred Chen, Yan Chen, Tiantian Zhu, Hai Yang, and Wei Ruan. ``Generic, Efficient, and Effective Deobfuscation and Semantic-Aware Attack Detection for PowerShell Scripts''(Revision, FITEE)
 \end{itemize}
 
-% \end{itemize}
 
-\section{实习经历}
-\datedsubsection{\textbf{阿里巴巴集团 | Alibaba}, 前端开发工程师}{2017.6-2017.9}
-\begin{itemize}
-%   \item 飞猪北京前端团队全面负责各交通线的票务(机票/火车票/汽车票) web 应用与事业群基础架构研发
-  \item 独立负责车站地图开发(React),通过HTML5 本地存储及JSBridge实现在阿里全系应用中发布上线
-  \item 独立负责BU SPM chrome插件开发,支付成功/订单详情等页面的开发与交叉营销的接入工作
-\end{itemize}
-
-\datedsubsection{\textbf{北京腾云天下科技有限公司 | TalkingData},数据挖掘与可视化工程师}{2015.11-2017.5}
-\begin{itemize}
-  \item \textbf{利用海量用户定位数据，对城市空间及人群移动特征进行研究。}第一个课题是基于香农熵和人群出行模式，构建城市网格与用户矩阵分析城市多样性/流动性分布；可视分析平台前端与可视化基于D3/Vue/Express开发，数据分析与存储采用Python/MySQL/MongoDB技术，为了均衡大数据情况下的页面可视化渲染消耗用canvas替代svg。第二个课题是对海量商场定位数据做人群分类与可视化查询，依据该系统撰写的论文被CIKM 2016(DAVA Workshop)录用，并收录于中科院软件所年会成果集
-  \item 负责数据科学部HQ LAB的可视化原型开发，主导 TalkingMind 平台系统设计与前端开发
-\end{itemize}
-
-\datedsubsection{\textbf{北京格灵深瞳信息技术有限公司 | DeepGlint},Web开发工程师}{2015.7-2015.9}
-\begin{itemize}
-  \item \textbf{独立负责MUSE部门的可视化组件研发。}与平台研发、设计协作完成 DeepGlint Developer 平台可视化图表组件的集成开发，符合完全定制化渲染、响应式布局与实时更新等特点
-  \item 利用 D3+Vue+WebGL(Three.js) 尝试实现三维空间的人群移动可视化
-\end{itemize}
-
-% \begin{onehalfspacing}
-% \end{onehalfspacing}
-
-% \datedsubsection{\textbf{DID-ACTE} 荷兰莱顿}{2015年3月 - 2015年6月}
-% \role{本科毕业设计}{LIACS 交换生}
-% 利用结巴分词对中国古文进行分词与词性标注，用已有领域知识训练形成 classifier 并对结果进行调优
-% \begin{onehalfspacing}
-% \begin{itemize}
-%   \item 利用结巴分词对中国古文进行分词与词性标注
-%   \item 利用已有领域知识训练形成 classifier, 并用分词结果进行测试反馈
-%   \item 尝试不同规则，对 classifier 进行调优
-% \end{itemize}
-% \end{onehalfspacing}
-
-\section{竞赛获奖/项目作品}
-% increase linespacing [parsep=0.5ex]
+\section{学术活动}
 \begin{itemize}[parsep=0.2ex]
-%   \item LeetCodeOJ Solutions, \textit{https://github.com/hijiangtao/LeetCodeOJ}
-  \item 第三届中国软件杯大学生软件设计大赛\textbf{全国一等奖}( \textit{http://www.cnsoftbei.com/} ),2014 年8月
-  \item 中国机器人大赛创意设计大赛\textbf{全国特等奖}( \textit{http://www.rcccaa.org/} ),2013年8月
-%   \item 中国机器人大赛暨Robocup公开赛(武术擂台赛)全国一等奖,2013年10月
-  \item 第11届北京理工大学“世纪杯”竞赛学生课外科技作品竞赛\textbf{特等奖},2013年8月
-  \item VIS Components for security system, \textit{https://hijiangtao.github.io/ss-vis-component/}
-  \item 个人博客：\textit{https://hijiangtao.github.io/}，更多作品见 \textit{https://github.com/hijiangtao}
-%   \item 电视节目"爸爸去哪儿"可视化分析展示, \textit{https://hijiangtao.github.io/variety-show-hot-spot-vis/}
+  \item 于 ``ACM CCS 2019'' 做报告展示关于 PowerShell 解混淆的最新工作, 英国伦敦
+  \item 受邀于 ``InforSec 网络空间安全国际顶会论文分享会做报告'' (北京网络空间安全大会分会场), 在线会议
+  \item Reviewer: IEEE ACCESS (2020)
+  \item SubReviewer: CCS'19, ICDCS'19, ESORICS'19, CCS'18
 \end{itemize}
 
-% \section{\faHeartO\ 项目/作品摘要}
-% \section{项目/作品摘要}
-% \datedline{\textit{An Integrated Version of Security Monitor Vis System}, https://hijiangtao.github.io/ss-vis-component/ }{}
-% \datedline{\textit{Dark-Tech}, https://github.com/hijiangtao/dark-tech/ }{}
-% \datedline{\textit{融合社交网络数据挖掘的电视节目可视化分析系统}, https://hijiangtao.github.io/variety-show-hot-spot-vis/}{}
-% \datedline{\textit{LeetCodeOJ Solutions}, https://github.com/hijiangtao/LeetCodeOJ}{}
-% \datedline{\textit{Info-Vis}, https://github.com/ISCAS-VIS/infovis-ucas}{}
-
-
-% \section{\faInfo\ 社会实践/其他}
-\section{社区参与/实践其他}
-% increase linespacing [parsep=0.5ex]
-\begin{itemize}[parsep=0.2ex]
-  \item 乐于参与开源社区讨论,\textbf{参与翻译 Vue.js, webpack, WebAssembly, Babel 文档，印记中文成员}
-  \item 中国科学院大学2016秋季学期可视化与可视分析课程助教，\textit{http://vis.ios.ac.cn/infovis-ucas/}
-  \item 未来论坛学生会成员、北理社联新闻信息中心主任、北理工软件学院学生会宣传部副部长(2012-2016)
-  \item 2013-2015 北京市共青团“温暖衣冬”志愿者,第九届园博会志愿者,2014 FLL机器人世锦赛志愿者
-\end{itemize}
-
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
 \end{document}
